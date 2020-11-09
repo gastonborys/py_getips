@@ -1,0 +1,9 @@
+#!/usr/bin/python
+import socket 
+import sys
+if len(sys.argv) > 1:
+    ips = socket.gethostbyname_ex(str(sys.argv[1]))[2]
+    for i in ips:
+	print(i)
+else:
+    print "Utilice: " + str(sys.argv[0]) + " dominio.com\r\n"
